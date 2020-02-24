@@ -21,7 +21,7 @@
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 </head>
-<body>
+<body style="background-color: #f5f5f5">
     <div id="root">
         <app></app>
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

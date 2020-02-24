@@ -1,8 +1,13 @@
 <?php
 
-Route::get('/{any}', function () {
+// Route::get('/{any}', function () {
+//     return view('home');
+// })->where('any', '.*');
+Route::get('/', function () {
     return view('home');
-})->where('any', '.*');
+});
+
+Route::get('blogs', 'BlogController@index');
 
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 // Auth::routes();

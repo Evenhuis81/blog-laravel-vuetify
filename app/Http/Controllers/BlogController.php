@@ -14,8 +14,14 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
-        return $blogs;
+        // $blogs = Blog::all();
+        // return $blogs;
+        $user = User::find(1);
+
+        return $user;
+
+        
+
     }
 
     /**

@@ -65,9 +65,9 @@ export default {
   // });
   //   },
   methods: {
-    // setData(blogs) {
-    //   this.blogs = blogs;
-    // }
+    setData(blogs) {
+      this.blogs = blogs;
+    }
   }
 };
 </script>

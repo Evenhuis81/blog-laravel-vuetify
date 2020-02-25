@@ -14,11 +14,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        // $blogs = Blog::all();
-        // return $blogs;
-        $user = User::find(1);
+        $blogs = Blog::all();
+        return response()->json($blogs);
+        // $user = User::find(1);
 
-        return $user;
+        // return $user;
+        // dd('nonapihomeroute');
 
         
 

@@ -24,17 +24,35 @@ export default {
   data() {
     return {
       items: [
-        // {
-        //   src: "/storage/app/public/categoryimages/writers-block-2340x700.jpg"
-        // },
         {
-          src: "/categoryimages/beste-intranetten-laptop-2340x700.jpg"
+          src: "/storage/categoryimages/Movies - video-videoformats-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/Upcoming 2020 - online-marketing-trends-2020-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/Music - meisje-luistert-naar-muziek-op-koptelefoon-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/Dating - klantcontact-menscontact-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/Mobile Trends - conversie-optimalisatie-CRO-trends-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/New Inventions - lamp-blog-1-2340x700.jpg"
+        },
+                {
+          src: "/storage/categoryimages/Social Media - Facebook-1-2340x700.jpg"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
+          src: "./storage/categoryimages/Adventure - customer-journey-roller-coaster-2340x700.jpg"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"
+          src: "./storage/categoryimages/Art - Linkbuilding-2340x700.jpg"
+        },
+        {
+          src: "./storage/categoryimages/Classic Stuff - customer-2340x700.jpg"
         }
       ]
     };
@@ -42,6 +60,7 @@ export default {
   name: "Blogs",
   mounted() {
     this.$store.dispatch("fetchBlogs");
+    this.$store.dispatch("fetchCategories")
   },
   methods: {
     deleteBlog(blog) {

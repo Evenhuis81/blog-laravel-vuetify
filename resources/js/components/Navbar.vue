@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-app-bar dense app clipped-left dark color="primary">
-      <v-img src="/images/logo_inverted.png" height="40" contain max-width="100"></v-img>
+      <v-img src="./storage/logo_inverted.png" height="40" contain max-width="100"></v-img>
       <v-toolbar-title>Blog Laravel Vue</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu offset-y>

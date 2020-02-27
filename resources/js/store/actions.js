@@ -6,12 +6,19 @@ let actions = {
             }).catch(err => {
                 console.log(err)
             })
-
     },
     fetchBlogs({ commit }) {
         axios.get('/api/blogs')
             .then(res => {
                 commit('FETCH_BLOGS', res.data)
+            }).catch(err => {
+                console.log(err)
+            })
+    },
+    fetchCategories({ commit }) {
+        axios.get('api/categories')
+            .then(res => {
+                commit('FETCH_CATEGORIES', res.data)
             }).catch(err => {
                 console.log(err)
             })

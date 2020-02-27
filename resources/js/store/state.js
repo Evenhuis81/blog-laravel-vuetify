@@ -1,5 +1,6 @@
 let state = {
-    blogs: []
+    blogs: [],
+    categories: []
 }
 
 export default state

@@ -1,6 +1,7 @@
 <template>
   <v-card>
-    <v-app-bar dense app clipped-left dark color="primary">
+    <!-- <v-app-bar dense app clipped-left dark color="primary"> -->
+    <v-app-bar dense app dark color="primary">
       <v-img src="./storage/logo_inverted.png" height="40" contain max-width="100"></v-img>
       <v-toolbar-title>Blog Laravel Vue</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -35,7 +36,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-navigation-drawer app clipped>
+    <!-- <v-navigation-drawer app clipped>
       <v-list class="mt-4">
         <v-list-item
           v-for="item in items"
@@ -53,7 +54,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer>-->
   </v-card>
 </template>
 

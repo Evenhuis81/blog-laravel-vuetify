@@ -9,7 +9,9 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    // component: Index
+    // component: require('../views/Index.vue').default
+    component: _ => import('../views/Index.vue')
   },
   {
     path: '/about',

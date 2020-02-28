@@ -2,7 +2,7 @@
   <v-card>
     <!-- <v-app-bar dense app clipped-left dark color="primary"> -->
     <v-app-bar dense app dark color="primary">
-      <v-img src="./storage/logo_inverted.png" height="40" contain max-width="100"></v-img>
+      <v-img src="/storage/logo_inverted.png" height="40" contain max-width="100"></v-img>
       <v-toolbar-title>Blog Laravel Vue</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu offset-y>
@@ -30,10 +30,12 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text>
+      <!-- <v-btn text>
         Sign In
         <v-icon right>mdi-login-variant</v-icon>
-      </v-btn>
+      </v-btn>-->
+
+      <login-form></login-form>
     </v-app-bar>
 
     <!-- <v-navigation-drawer app clipped>
@@ -59,10 +61,13 @@
 </template>
 
 <script>
+import loginForm from "./LoginForm.vue";
+
 export default {
+  components: { loginForm },
   data() {
     return {
-      asd: true,
+      // dialog: false,
       testlist: [
         { title: "Click Me" },
         { title: "Click Me" },

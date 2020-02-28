@@ -12,8 +12,11 @@ import vuetify from "./plugins/vuetify.js"
 import router from './plugins/router.js'
 import store from './store/index'
 import Vuex from "vuex";
+import * as moment from 'moment';
 
 Vue.use(Vuex);
+
+Vue.prototype.$moment = moment;
 
 Vue.config.productionTip = false
 

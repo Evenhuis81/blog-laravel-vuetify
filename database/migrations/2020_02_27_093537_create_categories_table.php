@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->string('image_name');
             $table->string('subheader');
+            $table->string('caroussel_color');
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Index from '../views/Index.vue'
+// import Index from '../views/Index.vue'
+import Show from '../views/Show.vue'
 import About from '../views/About.vue'
 
 Vue.use(VueRouter)
@@ -17,7 +18,13 @@ const routes = [
     path: '/about',
     name: 'about',
     component: About
-  }
+  },
+  {
+    path: '/blog/:id',
+    name: 'blog',
+    component: Show,
+    props: true
+  },
 ]
 
 const router = new VueRouter({

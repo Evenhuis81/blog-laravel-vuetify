@@ -18,6 +18,8 @@
         <v-card>
           <v-carousel cycle :show-arrows="false" v-model="carousselModel" hide-delimiters>
             <v-carousel-item
+              router
+              :to="'/about'"
               v-for="(item,i) in categories"
               :key="i"
               :src="item.image_name"
@@ -27,12 +29,36 @@
               <v-row class="fill-height" align="center" justify="center">
                 <p
                   text
-                  class="display-3 font-weight-black white--text"
-                  color="purple"
+                  class="display-3 font-weight-black"
+                  :class="item.caroussel_color"
                 >{{ item.subheader }}</p>
               </v-row>
             </v-carousel-item>
           </v-carousel>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="4" v-for="(blog, i) in blogs" :key="i">
+        <v-card class="mx-auto" max-width="450" outlined>
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="overline mb-4">Written {{ blogCreatedFromNow(blog.created_at) }}</div>
+              <v-list-item-title class="headline mb-1">{{ blog.title }}</v-list-item-title>
+              <v-list-item-subtitle>{{ blog.description }}</v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+          </v-list-item>
+
+          <v-card-actions>
+            <v-btn
+              router
+              :to="{ name: 'blog', params: { id: blog.id}}"
+              text
+              color="primary"
+            >Read Article</v-btn>
+            <v-btn text color="red">Edit Article</v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
@@ -54,6 +80,9 @@ export default {
     this.$store.dispatch("fetchCategories");
   },
   methods: {
+    blogCreatedFromNow(date) {
+      return this.$moment(date).fromNow();
+    }
     // deleteBlog(blog) {
     //   this.$store.dispatch("deleteBlog", blog);
     // }
